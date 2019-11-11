@@ -1,0 +1,22 @@
+{
+  "name": "fin-app",
+  "version": "1.0.0",
+  "description": "A financial app that shows financial transactions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/alvenmaretinus/fin-app.git"
+  },
+  "keywords": [
+    "fintech"
+  ],
+  "author": "Alven",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alvenmaretinus/fin-app/issues"
+  },
+  "homepage": "https://github.com/alvenmaretinus/fin-app#readme"
+}
