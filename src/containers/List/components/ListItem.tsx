@@ -22,7 +22,6 @@ const Wrapper = styled.div`
   border-radius: 8px;
   background: white;
   box-shadow: 2px 2px 12px 0 rgba(0, 0, 0, 0.1);
-  cursor: pointer;
   :not(:last-child) {
     margin-bottom: 16px;
   }
@@ -50,7 +49,7 @@ const CurrencyText = styled.div`
   color: rgba(0, 0, 0, 0.4);
   font-size: 32px;
   margin-right: 8px;
-  `
+`
 
 const AmountWrapper = styled.div`
   display: flex;
