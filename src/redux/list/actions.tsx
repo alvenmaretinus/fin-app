@@ -3,12 +3,14 @@ import { ThunkDispatch } from 'redux-thunk'
 import { RootReducer } from '../'
 import * as types from './types'
 
-export const getAndSetItems = () => async (
+export const getAndSetItems = (callback: () => void) => async (
     dispatch: ThunkDispatch<types.State, undefined, types.SetItems>,
   ): Promise<void> => {
-    const res = await axios.get('http://localhost:3000/items')
-    if (res.status === 200) {
+    try {
+      const res = await axios.get('http://localhost:3000/items')
       dispatch(setItems(res.data))
+    } finally {
+      callback()
     }
 }
 
