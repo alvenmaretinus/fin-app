@@ -1,6 +1,11 @@
 export const SET_ITEMS = 'SET_ITEMS'
 export type SET_ITEMS = typeof SET_ITEMS
+
+export const SET_REFUNDED = 'SET_REFUNDED'
+export type SET_REFUNDED = typeof SET_REFUNDED
+
 export interface State {
+  isEvenItemRefunded: boolean,
   items: ListItem[],
 }
 
@@ -29,4 +34,11 @@ export interface SetItems {
   }
 }
 
-export type Action = SetItems
+export interface SetEvenItemRefunded {
+  type: SET_REFUNDED,
+  payload: {
+    isRefunded: boolean,
+  },
+}
+
+export type Action = SetItems | SetEvenItemRefunded

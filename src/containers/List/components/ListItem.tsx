@@ -13,6 +13,10 @@ interface Props {
   history: HistoryDetail[],
 }
 
+interface StatusWrapperProps {
+  isRefunded: boolean,
+}
+
 const Wrapper = styled.div`
   padding: 16px;
   border-radius: 8px;
@@ -42,7 +46,6 @@ const DetailWrapper = styled.div`
   margin-top: 16px;
 `
 
-
 const CurrencyText = styled.div`
   color: rgba(0, 0, 0, 0.4);
   font-size: 32px;
@@ -66,7 +69,7 @@ const StatusWrapper = styled.div`
   color: rgba(0, 0, 0, 0.7);
   padding-top: 12px;
   > b {
-    color: #1abc9c;
+    color: ${(props: StatusWrapperProps) => props.isRefunded ? '#e74c3c' : '#1abc9c'};
     font-size: 32px;
   }
 `
@@ -88,6 +91,7 @@ const ListItem = (props: Props) => {
     amount,
     history,
   } = props
+  const lastHistoryStatus = history[history.length - 1].state
   return (
     <Wrapper>
       <IdText>Transaction ID: <b>{transactionId}</b></IdText>
@@ -100,9 +104,9 @@ const ListItem = (props: Props) => {
         <DetailText>Customer Email: <b>{customerEmail}</b></DetailText>
         <DetailText>Customer Name: <b>{customerName}</b></DetailText>
         <BottomWrapper>
-          <StatusWrapper>
+          <StatusWrapper isRefunded={lastHistoryStatus === 'REFUNDED'}>
             <span>Status:</span>
-            <b>{history[history.length - 1].state}</b>
+            <b>{lastHistoryStatus}</b>
           </StatusWrapper>
           <AmountWrapper>
             <CurrencyText>{currency}</CurrencyText>
@@ -110,16 +114,6 @@ const ListItem = (props: Props) => {
           </AmountWrapper>
         </BottomWrapper>
       </DetailWrapper>
-      <div>
-        {history.map(({ state, updatedDate, trigger }) => (
-          <div key={state}>
-            <br/>
-            <div>{state}</div>
-            <div>{updatedDate}</div>
-            <div>{trigger}</div>
-          </div>
-        ))}
-      </div>
     </Wrapper>
   )
 }
