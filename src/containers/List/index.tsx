@@ -1,10 +1,19 @@
 import * as React from 'react'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import styled from 'styled-components'
 import { RootReducer } from '../../redux'
 import { getAndSetItems } from '../../redux/list/actions'
 import { State as ListState } from '../../redux/list/types'
 import ListItem from './components/ListItem'
+
+const Wrapper = styled.div`
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  width: calc(100% + 32px);
+  margin-left: -16px;
+`
 
 const List = () => {
   const dispatch = useDispatch()
@@ -15,7 +24,7 @@ const List = () => {
   }, [])
 
   return (
-    <div>
+    <Wrapper>
       {list.items.map(({
         id,
         merchantId,
@@ -35,7 +44,7 @@ const List = () => {
           history={history}
         />
       ))}
-    </div>
+    </Wrapper>
   )
 }
 
