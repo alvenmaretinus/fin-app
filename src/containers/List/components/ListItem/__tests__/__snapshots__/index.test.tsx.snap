@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem component renders 1`] = `
+<div
+  className="sc-bdVaJa Kvqhm"
+>
+  <div
+    className="sc-bwzfXH hdeJEq"
+  >
+    Transaction ID: 
+    <b>
+      test
+    </b>
+  </div>
+  <div
+    className="sc-bwzfXH hdeJEq"
+  >
+    Merchant ID: 
+    <b>
+      test
+    </b>
+  </div>
+  <div
+    className="sc-bxivhb eWSlNr"
+  >
+    <div
+      className="sc-htpNat HLZcy"
+    >
+      Transaction Time:
+      <b>
+        November 10th 2019, 9:52:30 am
+      </b>
+    </div>
+    <div
+      className="sc-htpNat HLZcy"
+    >
+      Customer Email: 
+      <b>
+        test
+      </b>
+    </div>
+    <div
+      className="sc-htpNat HLZcy"
+    >
+      Customer Name: 
+      <b>
+        test
+      </b>
+    </div>
+    <div
+      className="sc-htoDjs AhDUY"
+    >
+      <div
+        className="sc-gzVnrw kPkGmF"
+      >
+        <span>
+          Status:
+        </span>
+        <b>
+          test
+        </b>
+      </div>
+      <div
+        className="sc-EHOje hMOWYH"
+      >
+        <div
+          className="sc-ifAKCX bURHAv"
+        >
+          test
+        </div>
+        <div
+          className="sc-bZQynM bsCzxP"
+        >
+          0
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

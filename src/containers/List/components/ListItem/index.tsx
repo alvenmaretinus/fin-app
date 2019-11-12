@@ -1,7 +1,7 @@
 import * as moment from 'moment'
 import * as React from 'react'
 import styled from 'styled-components'
-import { HistoryDetail } from '../../../redux/list/types'
+import { HistoryDetail } from '../../../../redux/list/types'
 
 interface Props {
   transactionId: string,

@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { ThunkDispatch } from 'redux-thunk'
-import { RootReducer } from '../'
+import { RootReducer } from '..'
 import * as types from './types'
 
 export const getAndSetItems = (callback: () => void) => async (
@@ -31,7 +31,7 @@ export const setEvenItemsRefunded = () => async (
         item.history.push({
           state: 'REFUNDED',
           trigger: 'MANUAL',
-          updatedDate: new Date().toString(),
+          updatedDate: new Date().toISOString(),
         })
       }
       return item
