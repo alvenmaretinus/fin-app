@@ -11,7 +11,7 @@ export const getAndSetItems = () => async (
     }
 }
 
-export const setItems = (items: object[]): types.SetItems => ({
+export const setItems = (items: types.ListItem[]): types.SetItems => ({
   payload: {
     items,
   },

@@ -4,6 +4,7 @@
     "quotemark": [true, "single"],
     "semicolon": [true, "never"],
     "trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
-    "interface-name": [true, "never-prefix"]
+    "interface-name": [true, "never-prefix"],
+    "jsx-no-multiline-js": false
   }
 }
