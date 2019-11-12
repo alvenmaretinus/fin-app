@@ -3,7 +3,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const { ProgressPlugin } = require('webpack');
 
 module.exports = {
-  entry: './src',
+  entry: ['@babel/polyfill', './src'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[chunkhash].js',
